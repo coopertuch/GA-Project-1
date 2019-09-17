@@ -1,3 +1,31 @@
-div, nav {
-    border: 1px solid black;
+.container {
+    border: 1px solid gray;
+    background-color: #E5E5E5;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #196489;
+}
+
+.logo {
+    float: left;
+}
+
+.burger {
+    float: right;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
