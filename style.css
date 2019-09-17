@@ -16,14 +16,6 @@ nav {
     background-color: #196489;
 }
 
-.logo {
-    float: left;
-}
-
-.burger {
-    float: right;
-}
-
 .buttons {
     display: flex;
     justify-content: center;
