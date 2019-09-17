@@ -51,7 +51,7 @@ input {
 }
 
 .input {
-    margin: 0 20% 5px 20%;
+    margin: 0 10% 5px 10%;
     text-align: center;
     height: 40px;
     border-radius: 3px;
@@ -83,17 +83,18 @@ input {
 
 .buttons {
     align-items: flex-end;
+    justify-content: space-evenly;
 }
 
-.scroll {
+.page {
     display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
 }
 
-.scroll button {
-    margin: 5px 2% 0px 2%;
+.page button {
+    margin: 5px 3px 0px 3px;
 }
 
 .thumbsup {
@@ -102,12 +103,4 @@ input {
 
 .thumbsdown {
     background-color: #F93E3E
-}
-
-.off {
-    display: none;
-}
-
-.on {
-    display: block;
 }

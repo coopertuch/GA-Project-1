@@ -5,6 +5,7 @@
 // Each Iteration Pops Current Question
 // Thumbs Up (Reports Positive), Thumbs Down (Reports Negative), Pops
 // If (array == 0), alert('You've answered all the questions in this category! Try another category, add your own questions, or reset.');
+// Set up GitHub Website
 
 // VARIABLES & OBJECTS //
 haveFunQuestions = [
@@ -103,6 +104,8 @@ reset.addEventListener('click', function() {
 // Thumbs Down Button (Reports Negative Feedback) (Pops Item)
 // const thumbsDown = document.querySelector('.thumbsdown');
 // thumbsDown.addEventListener('click', );
+
+// Timer
 
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
