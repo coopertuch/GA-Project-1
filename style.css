@@ -27,7 +27,7 @@ h1 {
 }
 
 main {
-    height: 600px;
+    height: 300px;
 }
 
 button {
@@ -50,7 +50,7 @@ button {
 }
 
 .question {
-    height: 500px;
+    height: 200px;
     font-size: 25px;
 }
 
@@ -78,3 +78,10 @@ button {
     margin: 0px 3px 0px 3px;
 }
 
+.thumbsup {
+    background-color: #3E8F41;
+}
+
+.thumbsdown {
+    background-color: #F93E3E
+}
