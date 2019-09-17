@@ -85,16 +85,6 @@ function startTopGame() {
     }
 }
 
-const addQuestion = document.querySelector('addQuestion');
-
-// TOGGLE ON & OFF FOR BLOCK
-function promptInput() {
-    question.classList.remove('on');
-    question.classList.add('off');
-    addQuestion.classList.remove('off')
-    addQuestion.classList.add('on');
-}
-
 const reset = document.querySelector('.reset');
 reset.addEventListener('click', function() {
     location.reload();
