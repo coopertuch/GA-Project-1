@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #1477a8
+    background-color: #106691;
 }
 
 nav {
@@ -12,12 +12,11 @@ nav {
     align-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #1477a8;
+    background-color: #106691;
 }
 
 h1 {
     background-color: white;
-    font-weight: bold;
     color: rgb(36, 36, 36);
     font-size: 30px;
     margin-top: 5px;
@@ -38,7 +37,6 @@ button {
     height: 32px;
     width: 13%;
     border-radius: 3px;
-    font-weight: bold;
 }
 
 input {
@@ -97,4 +95,12 @@ input {
 
 .thumbsdown {
     background-color: #F93E3E
+}
+
+.off {
+    display: none;
+}
+
+.on {
+    display: block;
 }

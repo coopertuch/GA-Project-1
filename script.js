@@ -1,10 +1,8 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
-// Multiple categories - Fun, Romantic, Deep, Custom, +
-// Randomly draws questions from selected category.
-// User can slideshow through questions.
-// Tracks a "thumbs up" or "thumbs down", removing the question.
-// Allow users to add their own questions in the + section.
-// Custom section contains all questions added from +
+
+// ACTION ITEMS //
+// + Input Object (Push to Custom Array)
+// Array to hold randomized questions to maintain order, pop old
 
 // VARIABLES & OBJECTS //
 haveFunQuestions = [
@@ -87,13 +85,15 @@ function startTopGame() {
     }
 }
 
+const addQuestion = document.querySelector('addQuestion');
+
+// TOGGLE ON & OFF FOR BLOCK
 function promptInput() {
-    questionInput = document.createElement('input');
-    questionInput.type = ('text');
-    questionInput.placeholder = ('Enter your own question!');
-    question.parentNode.replaceChild(questionInput, question);
+    question.classList.remove('on');
+    question.classList.add('off');
+    addQuestion.classList.remove('off')
+    addQuestion.classList.add('on');
 }
-// + Input Object (Push to Array)
 
 const reset = document.querySelector('.reset');
 reset.addEventListener('click', function() {
