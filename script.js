@@ -50,9 +50,10 @@ customQuestions = [
 // + Input Object (Push to Array)
 
 // DOM & EVENT LISTENERS //
+const question = document.querySelector('.question')
 // Have Fun Button
-// const haveFun = document.querySelector('.fun');
-// haveFun.addEventListener('click', );
+const haveFun = document.querySelector('.fun');
+haveFun.addEventListener('click', startGame);
 
 // Get Deep Questions Button
 // const getDeep = document.querySelector('.deep');
@@ -90,13 +91,10 @@ customQuestions = [
 // const next = document.querySelector('.next');
 // next.addEventListener('click', );
 
-// Reset (Resets Page)
-const reset = document.querySelector('.reset');
-reset.addEventListener('click', function() {
-    location.reload();
-});
-
 // FUNCTIONS //
+function startGame() {
+    question.innerHTML = 'Hello World';
+}
 // Have Fun Button Randomly Sets Questions 
 // Get Deep Questions Button Randomly Sets Questions 
 // This Or That Questions Button Randomly Sets Questions 
@@ -104,11 +102,16 @@ reset.addEventListener('click', function() {
 // Custom Questions Button Randomly Sets Questions From Custom Array
 // + Input Button Prompts User To Input Questions
 
-// Timer Button Starts Times (60 Seconds)
 // Thumbs Up Button (Reports Positive Feedback)
 // Thumbs Down Button (Reports Negative Feedback)
 // Arrow Left Button Slides Back
 // Arrow Right Button Slides Forward
+
+// Reset (Resets Page)
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', function() {
+    location.reload();
+});
 
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
