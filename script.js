@@ -1,8 +1,10 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// + Input Object (Push to Custom Array)
-// Array to hold randomized questions to maintain order, pop old
+// Set Up Input + Submit, Push to Custom Questions Array
+// Each Iteration Pops Current Question
+// Thumbs Up (Reports Positive), Thumbs Down (Reports Negative), Pops
+// If (array == 0), alert('You've answered all the questions in this category! Try another category, add your own questions, or reset.');
 
 // VARIABLES & OBJECTS //
 haveFunQuestions = [
@@ -50,11 +52,8 @@ thisOrThat.addEventListener('click', startThisGame);
 const topThree = document.querySelector('.top');
 topThree.addEventListener('click', startTopGame);
 
-let custom = document.querySelector('.top');
-topThree.addEventListener('click', startTopGame);
-
-const add = document.querySelector('.add');
-add.addEventListener('click', promptInput);
+let custom = document.querySelector('.custom');
+custom.addEventListener('click', startCustomGame);
 
 // FUNCTIONS //
 function startFunGame() {
@@ -85,35 +84,26 @@ function startTopGame() {
     }
 }
 
+function startCustomGame() {
+    for (i = 0; i < customQuestions.length; i++) {
+    customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
+    question.innerHTML = customRandom;
+    }
+}
+
 const reset = document.querySelector('.reset');
 reset.addEventListener('click', function() {
     location.reload();
 });
 
-// EXTRA //
-// Thumbs Up Button
+// Thumbs Up Button (Reports Positive Feedback)
 // const thumbsUp = document.querySelector('.thumbsup');
 // thumbsUp.addEventListener('click', );
 
-// Thumbs Down Button
+// Thumbs Down Button (Reports Negative Feedback) (Pops Item)
 // const thumbsDown = document.querySelector('.thumbsdown');
 // thumbsDown.addEventListener('click', );
-
-// Arrow Left Button
-// const previous = document.querySelector('.previous');
-// previous.addEventListener('click', );
-
-// Arrow Right Button
-// const next = document.querySelector('.next');
-// next.addEventListener('click', );
-
-// Thumbs Up Button (Reports Positive Feedback)
-// Thumbs Down Button (Reports Negative Feedback)
-// Arrow Left Button Slides Back
-// Arrow Right Button Slides Forward
 
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
 // page reset
-// https://plainjs.com/javascript/manipulation/replace-a-dom-element-36/
-// replaceing a DOM element
