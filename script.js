@@ -7,7 +7,6 @@
 // Custom section contains all questions added from +
 
 // VARIABLES & OBJECTS //
-// Have Fun Questions Object
 haveFunQuestions = [
     'sample fun question 1',
     'sample fun question 2',
@@ -15,7 +14,6 @@ haveFunQuestions = [
     'sample fun question 4',
     'sample fun question 5',
 ];
-// Get Deep Questions Object
 getDeepQuestions = [
     'sample deep question 1',
     'sample deep question 2',
@@ -23,7 +21,6 @@ getDeepQuestions = [
     'sample deep question 4',
     'sample deep question 5',
 ];
-// This Or That Questions Object
 thisOrThatQuestions = [
     'sample this or that question 1',
     'sample this or that question 2',
@@ -31,7 +28,6 @@ thisOrThatQuestions = [
     'sample this or that question 4',
     'sample this or that question 5',
 ];
-// Top 3 Questions Object
 topQuestions = [
     'sample top question 1',
     'sample top question 2',
@@ -39,42 +35,72 @@ topQuestions = [
     'sample top question 4',
     'sample top question 5',
 ];
-// Custom Questions Object (Empty Array)
-customQuestions = [
-    'sample custom question 1',
-    'sample custom question 2',
-    'sample custom question 3',
-    'sample custom question 4',
-    'sample custom question 5',
-];
-// + Input Object (Push to Array)
+customQuestions = [];
 
 // DOM & EVENT LISTENERS //
-const question = document.querySelector('.question')
-// Have Fun Button
+const question = document.querySelector('.question');
+
 const haveFun = document.querySelector('.fun');
-haveFun.addEventListener('click', startGame);
+haveFun.addEventListener('click', startFunGame);
 
-// Get Deep Questions Button
-// const getDeep = document.querySelector('.deep');
-// getDeep.addEventListener('click', );
+const getDeep = document.querySelector('.deep');
+getDeep.addEventListener('click', startDeepGame);
 
-// This Or That Questions Button
-// const thisOrThat = document.querySelector('.thisorthat');
-// thisOrThat.addEventListener('click', );
+const thisOrThat = document.querySelector('.thisorthat');
+thisOrThat.addEventListener('click', startThisGame);
 
-// Top 3 Questions Button
-// const top = document.querySelector('.top');
-// top.addEventListener('click', );
+const topThree = document.querySelector('.top');
+topThree.addEventListener('click', startTopGame);
 
-// Custom Questions Button 
-// const custom = document.querySelector('.custom');
-// custom.addEventListener('click', );
+let custom = document.querySelector('.top');
+topThree.addEventListener('click', startTopGame);
 
-// + Input Button 
-// const add = document.querySelector('.add');
-// add.addEventListener('click', );
+const add = document.querySelector('.add');
+add.addEventListener('click', promptInput);
 
+// FUNCTIONS //
+function startFunGame() {
+    for (i = 0; i < haveFunQuestions.length; i++) {
+    haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
+    question.innerHTML = haveFunRandom;
+    }
+}
+
+function startDeepGame() {
+    for (i = 0; i < getDeepQuestions.length; i++) {
+    getDeepRandom = getDeepQuestions[Math.floor(Math.random()*getDeepQuestions.length)];
+    question.innerHTML = getDeepRandom;
+    }
+}
+
+function startThisGame() {
+    for (i = 0; i < thisOrThatQuestions.length; i++) {
+    thisOrThatRandom = thisOrThatQuestions[Math.floor(Math.random()*thisOrThatQuestions.length)];
+    question.innerHTML = thisOrThatRandom;
+    }
+}
+
+function startTopGame() {
+    for (i = 0; i < topQuestions.length; i++) {
+    topRandom = topQuestions[Math.floor(Math.random()*topQuestions.length)];
+    question.innerHTML = topRandom;
+    }
+}
+
+function promptInput() {
+    questionInput = document.createElement('input');
+    questionInput.type = ('text');
+    questionInput.placeholder = ('Enter your own question!');
+    question.parentNode.replaceChild(questionInput, question);
+}
+// + Input Object (Push to Array)
+
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', function() {
+    location.reload();
+});
+
+// EXTRA //
 // Thumbs Up Button
 // const thumbsUp = document.querySelector('.thumbsup');
 // thumbsUp.addEventListener('click', );
@@ -91,28 +117,13 @@ haveFun.addEventListener('click', startGame);
 // const next = document.querySelector('.next');
 // next.addEventListener('click', );
 
-// FUNCTIONS //
-function startGame() {
-    question.innerHTML = 'Hello World';
-}
-// Have Fun Button Randomly Sets Questions 
-// Get Deep Questions Button Randomly Sets Questions 
-// This Or That Questions Button Randomly Sets Questions 
-// Top 3 Questions Button Randomly Sets Questions 
-// Custom Questions Button Randomly Sets Questions From Custom Array
-// + Input Button Prompts User To Input Questions
-
 // Thumbs Up Button (Reports Positive Feedback)
 // Thumbs Down Button (Reports Negative Feedback)
 // Arrow Left Button Slides Back
 // Arrow Right Button Slides Forward
 
-// Reset (Resets Page)
-const reset = document.querySelector('.reset');
-reset.addEventListener('click', function() {
-    location.reload();
-});
-
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
 // page reset
+// https://plainjs.com/javascript/manipulation/replace-a-dom-element-36/
+// replaceing a DOM element

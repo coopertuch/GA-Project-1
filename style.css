@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #196489
+    background-color: #1477a8
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
     align-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #196489;
+    background-color: #1477a8;
 }
 
 h1 {
@@ -41,6 +41,17 @@ button {
     font-weight: bold;
 }
 
+input {
+    border: 1px solid gray;
+    color: rgb(34, 34, 34);
+    width: 80%;
+    height: 25px;
+    margin: 35px 2% 186px 2%;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 3px;
+}
+
 .container {
     border: 1px solid gray;
     background-color: white;
@@ -61,6 +72,8 @@ button {
     color: rgb(34, 34, 34);
     height: 200px;
     font-size: 25px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .buttons {
