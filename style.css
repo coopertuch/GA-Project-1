@@ -50,11 +50,17 @@ input {
     border-radius: 3px;
 }
 
-.input {
-    margin: 0 10% 5px 10%;
+.addQuestion {
+    display: flex;
+    margin: 0px 10% 5px 10%;
     text-align: center;
     height: 40px;
     border-radius: 3px;
+    align-items: flex-start;
+}
+
+.submit {
+    height: 25px;
 }
 
 .container {
@@ -103,4 +109,12 @@ input {
 
 .thumbsdown {
     background-color: #F93E3E
+}
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
 }

@@ -59,6 +59,23 @@ topThree.addEventListener('click', startTopGame);
 let custom = document.querySelector('.custom');
 custom.addEventListener('click', startCustomGame);
 
+let add = document.querySelector('.add');
+let inputSection = document.querySelector('.inputSection');
+let submit = document.querySelector('.submit');
+add.addEventListener('click', toggleInput);
+submit.addEventListener('click', addCustom);
+
+function toggleInput() {
+    inputSection.classList.remove('off');
+    inputSection.classList.add('on');
+} 
+
+function addCustom() {
+    let input = document.querySelector('.input').value;
+    customQuestions.push(input);
+    console.log(customQuestions);
+}
+
 // FUNCTIONS //
 function startFunGame() {
     for (i = 0; i < haveFunQuestions.length; i++) {
