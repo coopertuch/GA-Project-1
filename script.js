@@ -55,10 +55,8 @@ topThree.addEventListener('click', startTopGame);
 let custom = document.querySelector('.custom');
 custom.addEventListener('click', startCustomGame);
 
-let add = document.querySelector('.add');
 let inputSection = document.querySelector('.inputSection');
 let submit = document.querySelector('.submit');
-add.addEventListener('click', toggleInput);
 submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
@@ -101,8 +99,6 @@ function startCustomGame() {
     }
 }
 
-
-
 function addCustom() {
     let input = document.querySelector('.input').value;
     customQuestions.push(input);
@@ -125,5 +121,6 @@ reset.addEventListener('click', function() {
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
 // page reset
-
-// set time out for 'Thanks!' display after submit
+// https://www.w3schools.com/howto/howto_js_remove_class.asp
+// https://www.w3schools.com/howto/howto_js_add_class.asp
+// remove // add class
