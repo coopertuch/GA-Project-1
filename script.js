@@ -59,13 +59,16 @@ let inputSection = document.querySelector('.inputSection');
 let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
+const thumbsDown = document.querySelector('.thumbsdown');
+const thumbsUp = document.querySelector('.thumbsup');
+
 // FUNCTIONS //
 function startFunGame() {
     for (i = 0; i < haveFunQuestions.length; i++) {
     haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
     question.innerHTML = haveFunRandom;
     }
-}
+};
 
 function startDeepGame() {
     for (i = 0; i < getDeepQuestions.length; i++) {
@@ -97,6 +100,10 @@ function startCustomGame() {
     customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
     question.innerHTML = customRandom;
     }
+}
+
+function popQuestion() {
+    question[i].pop();
 }
 
 function addCustom() {
