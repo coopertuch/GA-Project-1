@@ -1,12 +1,8 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Set Up Input + Submit, Push to Custom Questions Array. (push input.value to custom array)
-// Toggle (+) button using class='on off'
-// Each Iteration Pops Current Question
 // Thumbs Up (Reports Positive), Thumbs Down (Reports Negative), Pops
-// If (array == 0), alert('You've answered all the questions in this category! Try another category, add your own questions, or reset.');
-// CSS Button Change Color When Clicked
+// Fisher Yates Randomizers in Functions
 // Add Questions
 // Set up GitHub Website
 
@@ -65,17 +61,6 @@ let submit = document.querySelector('.submit');
 add.addEventListener('click', toggleInput);
 submit.addEventListener('click', addCustom);
 
-function toggleInput() {
-    inputSection.classList.remove('off');
-    inputSection.classList.add('on');
-} 
-
-function addCustom() {
-    let input = document.querySelector('.input').value;
-    customQuestions.push(input);
-    console.log(customQuestions);
-}
-
 // FUNCTIONS //
 function startFunGame() {
     for (i = 0; i < haveFunQuestions.length; i++) {
@@ -106,10 +91,22 @@ function startTopGame() {
 }
 
 function startCustomGame() {
+    inputSection.classList.remove('off');
+    inputSection.classList.add('on');
+    submit.classList.remove('off');
+    submit.classList.add('on');
     for (i = 0; i < customQuestions.length; i++) {
     customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
     question.innerHTML = customRandom;
     }
+}
+
+
+
+function addCustom() {
+    let input = document.querySelector('.input').value;
+    customQuestions.push(input);
+    document.querySelector('.input').value = '';
 }
 
 const reset = document.querySelector('.reset');
@@ -128,3 +125,5 @@ reset.addEventListener('click', function() {
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
 // page reset
+
+// set time out for 'Thanks!' display after submit
