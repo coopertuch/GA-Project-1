@@ -1,7 +1,6 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Thumbs Up (Reports Positive), Thumbs Down (Reports Negative), Pops
 // Fisher Yates Randomizers in Functions
 // Add Questions
 // Set up GitHub Website
@@ -59,9 +58,6 @@ let inputSection = document.querySelector('.inputSection');
 let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
-const thumbsDown = document.querySelector('.thumbsdown');
-const thumbsUp = document.querySelector('.thumbsup');
-
 // FUNCTIONS //
 function startFunGame() {
     for (i = 0; i < haveFunQuestions.length; i++) {
@@ -102,20 +98,24 @@ function startCustomGame() {
     }
 }
 
-function popQuestion() {
-    question[i].pop();
-}
-
 function addCustom() {
     let input = document.querySelector('.input').value;
     customQuestions.push(input);
     document.querySelector('.input').value = '';
 }
 
-const reset = document.querySelector('.reset');
-reset.addEventListener('click', function() {
+const home = document.querySelector('.home');
+home.addEventListener('click', function() {
     location.reload();
 });
+
+
+// EXTRA //
+/* <div class='thumbs'>
+<button class='thumbsup'>&#128077;</button>
+<button class='thumbsdown'>&#128078;</button>
+<button class='reset'>Reset</button>
+</div> */
 
 // Thumbs Up Button (Reports Positive Feedback)
 // const thumbsUp = document.querySelector('.thumbsup');
@@ -124,6 +124,8 @@ reset.addEventListener('click', function() {
 // Thumbs Down Button (Reports Negative Feedback) (Pops Item)
 // const thumbsDown = document.querySelector('.thumbsdown');
 // thumbsDown.addEventListener('click', );
+
+
 
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp

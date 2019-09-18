@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(210, 230, 255);
+    background-color: #303C6C;
 }
 
 nav {
@@ -12,12 +12,12 @@ nav {
     align-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(210, 230, 255);
+    background-color: #303C6C;
 }
 
-h1 {
-    background-color: #303C6C;
-    color: white;
+.home {
+    background-color: rgb(252, 252, 252);
+    color: #1F2833;
     font-size: 32px;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -25,17 +25,18 @@ h1 {
     margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid #1F2833;
+    height: 50px;
     width: 300px;
     text-align: center;
 }
 
 main {
-    height: 300px;
+    height: 250px;
 }
 
 button {
-    background-color: #303C6C;
-    color: white;
+    background-color: #D2FDFF;
+    color: black;
     justify-content: center;
     align-content: center;
     height: 32px;
@@ -99,13 +100,13 @@ button {
     text-align: center;
 }
 
-.thumbsup {
+/* .thumbsup {
     background-color: #3E8F41;
 }
 
 .thumbsdown {
     background-color: #F93E3E;
-}
+} */
 
 .on {
     display: block;
@@ -113,4 +114,8 @@ button {
 
 .off {
     display: none;
+}
+
+.submit {
+    background-color: #D2FDFF;
 }
