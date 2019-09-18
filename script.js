@@ -2,6 +2,7 @@
 
 // ACTION ITEMS //
 // Set Up Input + Submit, Push to Custom Questions Array. (push input.value to custom array)
+// Toggle (+) button using class='on off'
 // Each Iteration Pops Current Question
 // Thumbs Up (Reports Positive), Thumbs Down (Reports Negative), Pops
 // If (array == 0), alert('You've answered all the questions in this category! Try another category, add your own questions, or reset.');
