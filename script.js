@@ -1,9 +1,11 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Fisher Yates Randomizers in Functions
 // Add Questions
-// Set up GitHub Website
+// Clean up Files
+// Fisher Yates Randomizers in Functions
+// Read Project Requirements // ReadMe
+// Consider Additional Features
 
 // VARIABLES & OBJECTS //
 haveFunQuestions = [
