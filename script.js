@@ -1,9 +1,6 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Fix Fisher Yates Randomizer
-// Fix Mobile Text
-
 // Clean up CSS
 // ReadMe
 
@@ -23,7 +20,6 @@ haveFunQuestions = [
     'Do you like being surprised? Why or why not?',
     'Do you like to plan everything or go with the flow?',
     'Have you ever experienced a "such a small world" moment?',
-    'If you had to be a breed of dog, which do you think best fits your personality?',
     'What is the strangest experience you\'ve ever had?',
     'What superpower would you want to have?',
     'What is your spirit animal? Why?',
@@ -145,8 +141,6 @@ let inputSection = document.querySelector('.inputSection');
 let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
-let currentQuestion = 0;
-
 // FUNCTIONS //
 Array.prototype.shuffle = function() {
     let x = this.length, j, temp;
@@ -159,43 +153,48 @@ Array.prototype.shuffle = function() {
     return this;
 }
 
+let currentQuestion = 0;
 haveFunRandom = haveFunQuestions.shuffle();
+getDeepRandom = getDeepQuestions.shuffle();
+thisOrThatRandom = thisOrThatQuestions.shuffle();
+topRandom = topQuestions.shuffle();
+getDeepRandom = getDeepQuestions.shuffle();
+
 
 function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'You\'ve had too much fun. try out another category, add your own custom questions, or reset the game!';
+        question.innerHTML = 'All Done!<br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
+        currentQuestion = 0;
     }
 };
 
-// function startFunGame() {
-//     for (let i = 0; i < haveFunQuestions.length; i++) {
-//     haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
-//     question.innerHTML = haveFunRandom;
-//     }
-// }
-
 function startDeepGame() {
-    for (let i = 0; i < getDeepQuestions.length; i++) {
-    getDeepRandom = getDeepQuestions[Math.floor(Math.random()*getDeepQuestions.length)];
-    question.innerHTML = getDeepRandom;
+    question.innerHTML = getDeepRandom[currentQuestion];
+    currentQuestion++;
+    if (question.innerHTML === 'undefined') {
+        question.innerHTML = 'All Done!<br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
+        currentQuestion = 0;
     }
-}
+};
 
 function startThisGame() {
-    for (let i = 0; i < thisOrThatQuestions.length; i++) {
-    thisOrThatRandom = thisOrThatQuestions[Math.floor(Math.random()*thisOrThatQuestions.length)];
-    question.innerHTML = thisOrThatRandom;
+    question.innerHTML = thisOrThatRandom[currentQuestion];
+    currentQuestion++;
+    if (question.innerHTML === 'undefined') {
+        question.innerHTML = 'All Done!<br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
+        currentQuestion = 0;
     }
-}
-
+};
 function startTopGame() {
-    for (let i = 0; i < topQuestions.length; i++) {
-    topRandom = topQuestions[Math.floor(Math.random()*topQuestions.length)];
-    question.innerHTML = (`Rank your Top 3: ${topRandom}`);
+    question.innerHTML = (`Rank your top 3: ${topRandom[currentQuestion]}`);
+    currentQuestion++;
+    if (question.innerHTML === `Rank your top 3: undefined`) {
+        question.innerHTML = 'All Done!<br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
+        currentQuestion = 0;
     }
-}
+};
 
 function startCustomGame() {
     inputSection.classList.remove('off');
