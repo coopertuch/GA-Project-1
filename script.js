@@ -1,10 +1,11 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Clean up CSS
-
 // Fix Fisher Yates Randomizer
-// Fix Mobile Text Issues
+// Fix Mobile Text
+
+// Clean up CSS
+// ReadMe
 
 // Google API // Python
 // Consider Additional Features
@@ -18,7 +19,7 @@ haveFunQuestions = [
     'If you could have any scent in a candle, what would it be?',
     'Do you know how to use chop sticks? How and when did you learn?',
     'What is the minimum number of ply toilet paper is acceptable in your household?',
-    'What 3 people would you bring to dinner and why?',
+    'If you could invite anyone, what 3 people would you bring to dinner? Why?',
     'Do you like being surprised? Why or why not?',
     'Do you like to plan everything or go with the flow?',
     'Have you ever experienced a "such a small world" moment?',
@@ -28,6 +29,7 @@ haveFunQuestions = [
     'What is your spirit animal? Why?',
     'Would you like to be famous?',
     'If you could be any inanimate object, what would you be and why?',
+    'If a crystal ball could tell you anything you would like to know about the future, what would you like to know?',
 ];
 getDeepQuestions = [
     'Who is someone you admire and why?',
@@ -94,6 +96,8 @@ thisOrThatQuestions = [
     'Sunrise or Sunset?',
     'Waffles or Pancakes?',
     'Window or Aisle?',
+    'Shaken or Stirred?',
+    'Flat or Folded Pizza?',
 ];
 topQuestions = [
     'Albums',
@@ -115,6 +119,7 @@ topQuestions = [
     'Sports',
     'Thanksgiving Sides',
     'Trips',
+    'Fast Food',
 ];
 customQuestions = [];
 
@@ -141,23 +146,31 @@ let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
-Array.prototype.shuffle = function() {
-    let x = this.length, j, temp;
-    while(--x > 0) {
-        j = Math.floor(Math.random() * (x + 1));
-        temp = this[j];
-        this[j] = this[x];
-        this[x] = temp;
-    }
-    return this;
-}
+// Array.prototype.shuffle = function() {
+//     let x = this.length, j, temp;
+//     while(--x > 0) {
+//         j = Math.floor(Math.random() * (x + 1));
+//         temp = this[j];
+//         this[j] = this[x];
+//         this[x] = temp;
+//     }
+//     return this;
+// }
+
+// haveFunRandom = haveFunQuestions.shuffle();
+
+// function startFunGame() {
+//     for (x = 0; x < haveFunQuestions.length; x++) {
+//     question.innerHTML = haveFunRandom[x];
+//     }
+// };
 
 function startFunGame() {
-    let haveFunRandom = haveFunQuestions.shuffle();
     for (i = 0; i < haveFunQuestions.length; i++) {
-    question.innerHTML = haveFunRandom[i];
+    haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
+    question.innerHTML = haveFunRandom;
     }
-};
+}
 
 function startDeepGame() {
     for (i = 0; i < getDeepQuestions.length; i++) {
