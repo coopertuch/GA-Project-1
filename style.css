@@ -64,8 +64,6 @@ main {
 
 .inputSection {
     display: flex;
-    justify-content: center;
-    align-content: center;
 }
 
 .input {
@@ -73,7 +71,7 @@ main {
     border: 1px solid #1F2833;
     background-color: rgb(255, 255, 255);
     color: rgb(30, 30, 30);
-    width: 65%;
+    width: 68%;
     margin-left: auto;
     margin-right: auto;
     height: 32px;
