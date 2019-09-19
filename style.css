@@ -18,14 +18,14 @@ nav {
 .home {
     background-color: rgb(252, 252, 252);
     color: #1F2833;
-    font-size: 32px;
+    font-size: 24px;
     padding-top: 4px;
     padding-bottom: 4px;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
     border: 1px solid #1F2833;
-    height: 50px;
+    height: 40px;
     width: 300px;
     text-align: center;
 }
@@ -34,15 +34,32 @@ main {
     height: 250px;
 }
 
-button {
-    background-color: #D2FDFF;
-    color: black;
-    justify-content: center;
-    align-content: center;
-    height: 32px;
-    width: 13%;
-    border: 1px solid #1F2833;
-    border-radius: 3px;
+@media screen and (min-width: 600px) {}
+    button {
+        background-color: #62d6d6;
+        color: black;
+        justify-content: center;
+        align-content: center;
+        height: 32px;
+        width: 13%;
+        border: 1px solid #1F2833;
+        border-radius: 3px;
+        font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    button {
+        width: 70%;
+        background-color: #62d6d6;
+        color: black;
+        justify-content: center;
+        align-content: center;
+        height: 32px;
+        border: 1px solid #1F2833;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
 }
 
 .inputSection {
@@ -54,9 +71,9 @@ button {
     border: 1px solid #1F2833;
     background-color: rgb(255, 255, 255);
     color: rgb(30, 30, 30);
-    width: 94%;
+    width: 70%;
     height: 32px;
-    margin: 0px 3% 0px 3%;
+    margin: 0px 15% 0px 15%;
     text-align: center;
     justify-content: center;
     font-size: 12px;
@@ -73,16 +90,17 @@ button {
 
 .category {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .question {
     color: rgb(30, 30, 30);
     height: 200px;
-    font-size: 25px;
+    font-size: 18px;
     margin-left: 3%;
     margin-right: 3%;
 }
@@ -100,14 +118,6 @@ button {
     text-align: center;
 }
 
-/* .thumbsup {
-    background-color: #3E8F41;
-}
-
-.thumbsdown {
-    background-color: #F93E3E;
-} */
-
 .on {
     display: block;
 }
@@ -117,5 +127,13 @@ button {
 }
 
 .submit {
-    background-color: #D2FDFF;
+    background-color: #9871c9;
 }
+
+/* .thumbsup {
+    background-color: #3E8F41;
+}
+
+.thumbsdown {
+    background-color: #F93E3E;
+} */
