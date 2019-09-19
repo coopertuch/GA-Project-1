@@ -117,6 +117,8 @@ topQuestions = [
     'Thanksgiving Sides',
     'Trips',
     'Fast Food',
+    'Breakfast Bread (Banana, Zucchini, Pumpkin, etc.)',
+    'Candy',
 ];
 customQuestions = [];
 
