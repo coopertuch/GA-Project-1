@@ -165,7 +165,7 @@ function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'All Done!<br><br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -174,7 +174,7 @@ function startDeepGame() {
     question.innerHTML = getDeepRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -183,7 +183,7 @@ function startThisGame() {
     question.innerHTML = thisOrThatRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'All Done!<br><br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -191,7 +191,7 @@ function startTopGame() {
     question.innerHTML = (`Rank your top 3: ${topRandom[currentQuestion]}`);
     currentQuestion++;
     if (question.innerHTML === `Rank your top 3: undefined`) {
-        question.innerHTML = 'All Done!<br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'All Done!<br><br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };

@@ -46,6 +46,15 @@ nav {
     main {
         height: 150px;
     }
+
+    form {
+        margin-top: 10px;
+    }
+
+    .submit {
+        background-color: #9871c9;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width: 600px) {
