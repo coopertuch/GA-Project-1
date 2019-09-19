@@ -1,12 +1,13 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 
 // ACTION ITEMS //
-// Clean up Files
-// Read Project Requirements // ReadMe
-// Fisher Yates Randomizers in Functions
+// Clean up CSS
+
+// Fix Submit w/ Enter
+// Fix Fisher Yates Randomizer
+// Fix Mobile Text Issues
 
 // Google API // Python
-// Fix Submit w/ Enter
 // Consider Additional Features
 
 // VARIABLES & OBJECTS //
@@ -18,7 +19,6 @@ haveFunQuestions = [
     'If you could have any scent in a candle, what would it be?',
     'Do you know how to use chop sticks? How and when did you learn?',
     'What is the minimum number of ply toilet paper is acceptable in your household?',
-    'How was your first kiss?',
     'What 3 people would you bring to dinner and why?',
     'Do you like being surprised? Why or why not?',
     'Do you like to plan everything or go with the flow?',
@@ -28,7 +28,7 @@ haveFunQuestions = [
     'What superpower would you want to have?',
     'What is your spirit animal? Why?',
     'Would you like to be famous?',
-    'If you could be any inanimate object, what would you be and why?'
+    'If you could be any inanimate object, what would you be and why?',
 ];
 getDeepQuestions = [
     'Who is someone you admire and why?',
@@ -142,10 +142,21 @@ let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
+Array.prototype.shuffle = function() {
+    let x = this.length, j, temp;
+    while(--x > 0) {
+        j = Math.floor(Math.random() * (x + 1));
+        temp = this[j];
+        this[j] = this[x];
+        this[x] = temp;
+    }
+    return this;
+}
+
 function startFunGame() {
+    let haveFunRandom = haveFunQuestions.shuffle();
     for (i = 0; i < haveFunQuestions.length; i++) {
-    haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
-    question.innerHTML = haveFunRandom;
+    question.innerHTML = haveFunRandom[i];
     }
 };
 
@@ -218,3 +229,5 @@ home.addEventListener('click', function() {
 // media queries syntax
 // https://developers.google.com/sheets/api/quickstart/js
 // google API
+// https://www.youtube.com/watch?v=tLxBwSL3lPQ
+// fisher yates shuffle
