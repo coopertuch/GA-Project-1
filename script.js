@@ -145,49 +145,53 @@ let inputSection = document.querySelector('.inputSection');
 let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
+let currentQuestion = 0;
+
 // FUNCTIONS //
-// Array.prototype.shuffle = function() {
-//     let x = this.length, j, temp;
-//     while(--x > 0) {
-//         j = Math.floor(Math.random() * (x + 1));
-//         temp = this[j];
-//         this[j] = this[x];
-//         this[x] = temp;
-//     }
-//     return this;
-// }
-
-// haveFunRandom = haveFunQuestions.shuffle();
-
-// function startFunGame() {
-//     for (x = 0; x < haveFunQuestions.length; x++) {
-//     question.innerHTML = haveFunRandom[x];
-//     }
-// };
-
-function startFunGame() {
-    for (i = 0; i < haveFunQuestions.length; i++) {
-    haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
-    question.innerHTML = haveFunRandom;
+Array.prototype.shuffle = function() {
+    let x = this.length, j, temp;
+    while(--x > 0) {
+        j = Math.floor(Math.random() * (x + 1));
+        temp = this[j];
+        this[j] = this[x];
+        this[x] = temp;
     }
+    return this;
 }
 
+haveFunRandom = haveFunQuestions.shuffle();
+
+function startFunGame() {
+    question.innerHTML = haveFunRandom[currentQuestion];
+    currentQuestion++;
+    if (question.innerHTML === 'undefined') {
+        question.innerHTML = 'You\'ve had too much fun. try out another category, add your own custom questions, or reset the game!';
+    }
+};
+
+// function startFunGame() {
+//     for (let i = 0; i < haveFunQuestions.length; i++) {
+//     haveFunRandom = haveFunQuestions[Math.floor(Math.random()*haveFunQuestions.length)];
+//     question.innerHTML = haveFunRandom;
+//     }
+// }
+
 function startDeepGame() {
-    for (i = 0; i < getDeepQuestions.length; i++) {
+    for (let i = 0; i < getDeepQuestions.length; i++) {
     getDeepRandom = getDeepQuestions[Math.floor(Math.random()*getDeepQuestions.length)];
     question.innerHTML = getDeepRandom;
     }
 }
 
 function startThisGame() {
-    for (i = 0; i < thisOrThatQuestions.length; i++) {
+    for (let i = 0; i < thisOrThatQuestions.length; i++) {
     thisOrThatRandom = thisOrThatQuestions[Math.floor(Math.random()*thisOrThatQuestions.length)];
     question.innerHTML = thisOrThatRandom;
     }
 }
 
 function startTopGame() {
-    for (i = 0; i < topQuestions.length; i++) {
+    for (let i = 0; i < topQuestions.length; i++) {
     topRandom = topQuestions[Math.floor(Math.random()*topQuestions.length)];
     question.innerHTML = (`Rank your Top 3: ${topRandom}`);
     }
@@ -198,7 +202,7 @@ function startCustomGame() {
     inputSection.classList.add('on');
     submit.classList.remove('off');
     submit.classList.add('on');
-    for (i = 0; i < customQuestions.length; i++) {
+    for (let i = 0; i < customQuestions.length; i++) {
     customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
     question.innerHTML = customRandom;
     }
