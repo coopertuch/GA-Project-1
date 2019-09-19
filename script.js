@@ -26,6 +26,7 @@ haveFunQuestions = [
     'Would you like to be famous?',
     'If you could be any inanimate object, what would you be and why?',
     'If a crystal ball could tell you anything you would like to know about the future, what would you like to know?',
+    'How ripe do you like your bananas?',
 ];
 getDeepQuestions = [
     'Who is someone you admire and why?',
