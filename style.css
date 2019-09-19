@@ -64,6 +64,8 @@ main {
 
 .inputSection {
     display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .input {
@@ -71,9 +73,10 @@ main {
     border: 1px solid #1F2833;
     background-color: rgb(255, 255, 255);
     color: rgb(30, 30, 30);
-    width: 60%;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
     height: 32px;
-    margin: 0px 19% 0px 19%;
     text-align: center;
     justify-content: center;
     font-size: 12px;
