@@ -3,7 +3,6 @@
 // ACTION ITEMS //
 // Clean up CSS
 
-// Fix Submit w/ Enter
 // Fix Fisher Yates Randomizer
 // Fix Mobile Text Issues
 
@@ -192,7 +191,8 @@ function startCustomGame() {
     }
 }
 
-function addCustom() {
+function addCustom(event) {
+    event.preventDefault();
     let input = document.querySelector('.input').value;
     customQuestions.push(input);
     document.querySelector('.input').value = '';
