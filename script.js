@@ -1,6 +1,6 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 // VARIABLES & OBJECTS //
-haveFunQuestions = [
+let haveFunQuestions = [
     'What "weird" or "strange" foods do you enjoy?',
     'What is your favorite kitchen appliance?',
     'What foods will you not eat? Why?',
@@ -20,7 +20,7 @@ haveFunQuestions = [
     'If a crystal ball could tell you anything you would like to know about the future, what would you like to know?',
     'How ripe do you like your bananas?',
 ];
-getDeepQuestions = [
+let getDeepQuestions = [
     'Who is someone you admire and why?',
     'What was the most significant period of growth in your life?',
     'What are you most looking forward to in the next month? ',
@@ -61,7 +61,7 @@ getDeepQuestions = [
     'What is the hardest physical activity you have ever done?',
     'What is the first happy memory that comes to mind?',
 ];
-thisOrThatQuestions = [
+let thisOrThatQuestions = [
     'Booth or Table?',
     'Caffeine or Alcohol?',
     'Cats or Dogs?',
@@ -88,7 +88,7 @@ thisOrThatQuestions = [
     'Shaken or Stirred?',
     'Flat or Folded Pizza?',
 ];
-topQuestions = [
+let topQuestions = [
     'Albums',
     'Artists',
     'Books',
@@ -112,7 +112,7 @@ topQuestions = [
     'Breakfast Bread (Banana, Zucchini, Pumpkin, etc.)',
     'Candy',
 ];
-customQuestions = [];
+let customQuestions = [];
 
 // DOM & EVENT LISTENERS //
 const question = document.querySelector('.question');
