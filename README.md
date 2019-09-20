@@ -25,5 +25,5 @@ Visit https://coopertuch.github.io/GA-Project-1/ to play the game!
 
 ## Contribution Guidelines
 Additional questions are always welcome, along with any other ideas for improvement.<br>
-View existing code here - https://github.com/coopertuch/GA-Project-1<br>
-Submit an issue here - https://github.com/coopertuch/GA-Project-1/issues
+View existing code here: https://github.com/coopertuch/GA-Project-1<br>
+Submit an issue here: https://github.com/coopertuch/GA-Project-1/issues
