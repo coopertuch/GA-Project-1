@@ -1,12 +1,4 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
-
-// ACTION ITEMS //
-// Clean up CSS
-// ReadMe
-
-// Google API // Python
-// Consider Additional Features
-
 // VARIABLES & OBJECTS //
 haveFunQuestions = [
     'What "weird" or "strange" foods do you enjoy?',
@@ -163,7 +155,6 @@ thisOrThatRandom = thisOrThatQuestions.shuffle();
 topRandom = topQuestions.shuffle();
 getDeepRandom = getDeepQuestions.shuffle();
 
-
 function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
     currentQuestion++;
@@ -221,22 +212,6 @@ const home = document.querySelector('.home');
 home.addEventListener('click', function() {
     location.reload();
 });
-
-
-// EXTRA //
-/* <div class='thumbs'>
-<button class='thumbsup'>&#128077;</button>
-<button class='thumbsdown'>&#128078;</button>
-<button class='reset'>Reset</button>
-</div> */
-
-// Thumbs Up Button (Reports Positive Feedback)
-// const thumbsUp = document.querySelector('.thumbsup');
-// thumbsUp.addEventListener('click', );
-
-// Thumbs Down Button (Reports Negative Feedback) (Pops Item)
-// const thumbsDown = document.querySelector('.thumbsdown');
-// thumbsDown.addEventListener('click', );
 
 // SOURCES //
 // https://www.w3schools.com/jsref/met_loc_reload.asp
