@@ -14,6 +14,7 @@ On load, you will be prompted to begin tapping on categories, alongside reset in
 
 ## Features in Progress
 Moving forward, there are plans to implement accounts, where users can create a profile and store their own custom questions. Additionally, users can upvote questions to provide positive feedback to aid in generating new questions, while the downvote will remove the question from their account (example shown below). Next, users can 'connect' with other users, combining their pool of custom questions and eliminating any questions each may have removed previously. The next immediate feature in progress will be setting up a Google Sheets API, to simplify and streamline the process of adding and editing questions. 
+
 ![Project Example 5](ProjectExample5.png);
 
 ## Technologies Used
