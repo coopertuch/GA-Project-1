@@ -137,7 +137,7 @@ let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
-Array.prototype.shuffle = function() {
+Array.prototype.random = function() {
     let x = this.length, j, temp;
     while(--x > 0) {
         j = Math.floor(Math.random() * (x + 1));
@@ -149,11 +149,11 @@ Array.prototype.shuffle = function() {
 }
 
 let currentQuestion = 0;
-haveFunRandom = haveFunQuestions.shuffle();
-getDeepRandom = getDeepQuestions.shuffle();
-thisOrThatRandom = thisOrThatQuestions.shuffle();
-topRandom = topQuestions.shuffle();
-getDeepRandom = getDeepQuestions.shuffle();
+haveFunRandom = haveFunQuestions.random();
+getDeepRandom = getDeepQuestions.random();
+thisOrThatRandom = thisOrThatQuestions.random();
+topRandom = topQuestions.random();
+getDeepRandom = getDeepQuestions.random();
 
 function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
@@ -225,3 +225,5 @@ home.addEventListener('click', function() {
 // google API
 // https://www.youtube.com/watch?v=tLxBwSL3lPQ
 // fisher yates shuffle
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
+// array prototype
