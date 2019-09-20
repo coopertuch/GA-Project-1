@@ -227,3 +227,5 @@ home.addEventListener('click', function() {
 // fisher yates shuffle
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
 // array prototype
+// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+// nesting the fisher yates within the array prototype
