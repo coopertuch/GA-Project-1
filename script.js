@@ -1,5 +1,9 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 // VARIABLES & OBJECTS //
+
+// These arrays you can module.exports fromo another file and require them in. 
+// ES6 now allows for you to import like: 
+// `const { first, second, third } = require('./path/to/first_file.js');`
 let haveFunQuestions = [
     'What "weird" or "strange" foods do you enjoy?',
     'What is your favorite kitchen appliance?',
@@ -115,10 +119,17 @@ let topQuestions = [
 let customQuestions = [];
 
 // DOM & EVENT LISTENERS //
+
+// if you're interested we can talk about how this can be cleaned up using jquery.
+// this jQuery was removed from the curriculum, but we can talk about how we can get you hooked up for your next project
+// if you're interested I gave an example of what this part of your code would look like using jquery 
 const question = document.querySelector('.question');
 
+// these lines would look like: 
 const haveFun = document.querySelector('.fun');
 haveFun.addEventListener('click', startFunGame);
+// $(.fun).click(startFunGame) 
+// this queries the DOM and adds an event listener of click, and passes the function 
 
 const getDeep = document.querySelector('.deep');
 getDeep.addEventListener('click', startDeepGame);
@@ -137,6 +148,8 @@ let submit = document.querySelector('.submit');
 submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
+// https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/
+// https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 Array.prototype.random = function() {
     let x = this.length, j, temp;
     while(--x > 0) {
@@ -147,6 +160,20 @@ Array.prototype.random = function() {
     }
     return this;
 }
+// ES6 now allows for array deconstruction, which means you can rearrange an array using it's indexes to rearrange the items, which is what you're doing here. The function I'm share is ALMOST the same it just looks at cleaner with the deconstruction method. 
+// you can then create an array.prototype.random like you did to make it more useful. 
+// but it would look like this: 
+// /**
+//  * Shuffles array in place. ES6 version
+//  * @param {Array} a items An array containing the items.
+//  */
+// function shuffle(a) {
+//     for (let i = a.length - 1; i > 0; i--) {
+//         const j = Math.floor(Math.random() * (i + 1));
+//         [a[i], a[j]] = [a[j], a[i]]; 
+//     }
+//     return a;
+// }
 
 let currentQuestion = 0;
 haveFunRandom = haveFunQuestions.random();
