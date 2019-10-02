@@ -90,7 +90,7 @@ nav {
 .off {
     display: none;
 }
-
+/* LOVE LOVE LOVE what you did with the on/off class. amazing work! */
 
 @media screen and (min-width: 600px) {
     main {
@@ -115,7 +115,11 @@ nav {
         margin-top: 10px;
     }
 }
-
+/* I love that you created this mobile friendly.
+My only design advice would be to make these buttons bigger. 
+Since you have 4 buttons to choose from they can all share the space on the screen, 
+then the custom button can stay as is and span the width of the screen. 
+once on mobile the user is using their fingertips to aim for buttons.  */
 @media screen and (max-width: 600px) {
     main {
         height: 250px;
