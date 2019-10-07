@@ -13,7 +13,7 @@ let haveFunQuestions = [
     'Do you like to plan everything or go with the flow?',
     'Have you ever experienced a "such a small world" moment?',
     'What is the strangest experience you\'ve ever had?',
-    'What superpower would you want to have?',
+    'What superpower would you want and why?',
     'What is your spirit animal? Why?',
     'Would you like to be famous?',
     'If you could be any inanimate object, what would you be and why?',
@@ -129,12 +129,12 @@ thisOrThat.addEventListener('click', startThisGame);
 const topThree = document.querySelector('.top');
 topThree.addEventListener('click', startTopGame);
 
-let custom = document.querySelector('.custom');
-custom.addEventListener('click', startCustomGame);
+// let custom = document.querySelector('.custom');
+// custom.addEventListener('click', startCustomGame);
 
-let inputSection = document.querySelector('.inputSection');
-let submit = document.querySelector('.submit');
-submit.addEventListener('click', addCustom);
+// let inputSection = document.querySelector('.inputSection');
+// let submit = document.querySelector('.submit');
+// submit.addEventListener('click', addCustom);
 
 // FUNCTIONS //
 Array.prototype.random = function() {
@@ -148,12 +148,12 @@ Array.prototype.random = function() {
     return this;
 }
 
+// set currentFunQuestion within each function
 let currentQuestion = 0;
 haveFunRandom = haveFunQuestions.random();
 getDeepRandom = getDeepQuestions.random();
 thisOrThatRandom = thisOrThatQuestions.random();
 topRandom = topQuestions.random();
-getDeepRandom = getDeepQuestions.random();
 
 function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
@@ -190,23 +190,23 @@ function startTopGame() {
     }
 };
 
-function startCustomGame() {
-    inputSection.classList.remove('off');
-    inputSection.classList.add('on');
-    submit.classList.remove('off');
-    submit.classList.add('on');
-    for (let i = 0; i < customQuestions.length; i++) {
-    customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
-    question.innerHTML = customRandom;
-    }
-}
+// function startCustomGame() {
+//     inputSection.classList.remove('off');
+//     inputSection.classList.add('on');
+//     submit.classList.remove('off');
+//     submit.classList.add('on');
+//     for (let i = 0; i < customQuestions.length; i++) {
+//     customRandom = customQuestions[Math.floor(Math.random()*customQuestions.length)];
+//     question.innerHTML = customRandom;
+//     }
+// }
 
-function addCustom(event) {
-    event.preventDefault();
-    let input = document.querySelector('.input').value;
-    customQuestions.push(input);
-    document.querySelector('.input').value = '';
-}
+// function addCustom(event) {
+//     event.preventDefault();
+//     let input = document.querySelector('.input').value;
+//     customQuestions.push(input);
+//     document.querySelector('.input').value = '';
+// }
 
 const home = document.querySelector('.home');
 home.addEventListener('click', function() {
