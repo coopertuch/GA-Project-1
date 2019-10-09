@@ -174,6 +174,7 @@ function startFunGame() {
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
         // question.innerHTML = 'All Done!<br><br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'Keep clicking!';
         currentQuestion = 0;
     }
 };
@@ -183,6 +184,7 @@ function startDeepGame() {
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
         // question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'Keep clicking!';
         currentQuestion = 0;
     }
 };
@@ -192,6 +194,7 @@ function startThisGame() {
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
         // question.innerHTML = 'All Done!<br><br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'Keep clicking!';
         currentQuestion = 0;
     }
 };
@@ -200,6 +203,7 @@ function startTopGame() {
     currentQuestion++;
     if (question.innerHTML === `Rank your top 3: undefined`) {
         // question.innerHTML = 'All Done!<br><br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
+        question.innerHTML = 'Keep clicking!';
         currentQuestion = 0;
     }
 };
