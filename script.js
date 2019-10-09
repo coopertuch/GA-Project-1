@@ -8,7 +8,7 @@ let haveFunQuestions = [
     'What 3 people would you bring to dinner?',
     'What were your first impressions of the people you\'re with?',
     'What is one of your favorite ongoing jokes between friends?',
-    'Do you like being surprised? ',
+    'Do you like being surprised?',
     'Have you ever experienced a "this is such a small world" moment?',
     'If you had to be a breed of dog, which do you think best fits your personality?',
     'If you could be any animal, what type would you be?',
