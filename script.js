@@ -1,38 +1,51 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection. 
 // VARIABLES & OBJECTS //
 let haveFunQuestions = [
-    'What "weird" or "strange" foods do you enjoy?',
-    'What is your favorite kitchen appliance?',
-    'What foods will you not eat? Why?',
+    'What foods will you not eat?',
     'What is the craziest thing you\'ve ever eaten?',
     'If you could have any scent in a candle, what would it be?',
-    'Do you know how to use chop sticks? How and when did you learn?',
-    'What is the minimum number of ply toilet paper is acceptable in your household?',
-    'If you could invite anyone, what 3 people would you bring to dinner? Why?',
-    'Do you like being surprised? Why or why not?',
-    'Do you like to plan everything or go with the flow?',
-    'Have you ever experienced a "such a small world" moment?',
-    'What is the strangest experience you\'ve ever had?',
-    'What superpower would you want and why?',
-    'What is your spirit animal? Why?',
+    'What is the hardest physical activity you have ever done?',
+    'What 3 people would you bring to dinner?',
+    'What were your first impressions of the people you\'re with?',
+    'What is one of your favorite ongoing jokes between friends?',
+    'Do you like being surprised? ',
+    'Have you ever experienced a "this is such a small world" moment?',
+    'If you had to be a breed of dog, which do you think best fits your personality?',
+    'If you could be any animal, what type would you be?',
+    'What superpower would you want?',
     'Would you like to be famous?',
-    'If you could be any inanimate object, what would you be and why?',
-    'If a crystal ball could tell you anything you would like to know about the future, what would you like to know?',
+    'Do you have a "Happy Place"? Where is it? How often do you go?',
+    'If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?',
+    'If you could "uninvent" one thing, what would it be?',
+    'If you could "unknow" one thing you know, what would it be?',
     'How ripe do you like your bananas?',
+    'If you could be invisible for one hour, where would you go and what would you do?',
+    'If you were to perform in the circus, what would you do?',
+    'if you could call yourself at any point in the past and speak for 1 minute, what would you say?',
+    'What activities bring you the most joy?',
+    'What\'s your favorite quote?',
+    'What\'s the last song that was playing in your head?',
+    'What\'s your dream vacation?',
+    'If you changed your name, what would it be?',
+    'How toasty do you like your toast?',
+    'What % cacao do you prefer?',
+    'What topic you could discuss endlessly?',
+    'When\'s the hardest you\'ve laughed?',
+    'What are 3 adjectives you would use to describe yourself?',
 ];
 let getDeepQuestions = [
-    'Who is someone you admire and why?',
+    'Who is someone you admire?',
     'What was the most significant period of growth in your life?',
-    'What are you most looking forward to in the next month? ',
-    'What are you most nervous about in the next month? ',
-    'What are you looking to accomplish in the next month? ',
+    'What are you most looking forward to in the next month?',
+    'What are you most nervous about in the next month?',
+    'What are you looking to accomplish in the next month?',
     'What situations are you the most nervous in? How do you relieve that feeling?',
-    'What attributes do you most value in your friends? ',
+    'What attributes do you most value in your friends?',
     'In what situations do you feel the most confident?',
     'What activities allow you to find flow state?',
-    'How would you describe your relationships with your family? ',
-    'How would you describe your relationships with your closest friends? ',
-    'Do you have any regrets? ',
+    'How would you describe your relationships with your family?',
+    'How would you describe your relationships with your closest friends?',
+    'Do you have any regrets?',
     'What is your opinion on fate or free will?',
     'Who do you go to for advice? What type of advice or support is the most helpful for you? ',
     'In what aspects of your life are you a leader? ',
@@ -40,7 +53,7 @@ let getDeepQuestions = [
     'Are you comfortable being the center of attention? ',
     'Do you keep in touch with friends who live in a different city? How?',
     'What is the longest friendship you have? ',
-    'When was the last time you cried? Why? ',
+    'When was the last time you cried?',
     'When was the last time you had butterflies in your stomach?',
     'What is a skill you would like to have? What is stopping you from learning that skill?',
     'What makes you unique?',
@@ -50,16 +63,16 @@ let getDeepQuestions = [
     'How do you approach conflict resolution?',
     'What are your core values?',
     'What can you do or change to focus more on your wellbeing?',
-    'What is your most treasured possession and why?',
+    'What is your most treasured possession?',
     'What are you passionate about? ',
     'What would be a perfect day for you?',
-    'What was the best gift you ever received? Why?',
-    'What is your most underrated attribute? Why? ',
-    'What is your most overrated attribute? Why? ',
+    'What was the best gift you ever received?',
+    'What is your most underrated attribute?',
+    'What is your most overrated attribute?',
     'What do you value most in a friendship?',
     'For what in your life do you feel most grateful?',
-    'What is the hardest physical activity you have ever done?',
     'What is the first happy memory that comes to mind?',
+    'What is your idea of happiness?',
 ];
 let thisOrThatQuestions = [
     'Booth or Table?',
@@ -87,6 +100,8 @@ let thisOrThatQuestions = [
     'Window or Aisle?',
     'Shaken or Stirred?',
     'Flat or Folded Pizza?',
+    'Deep Dish or Thin Crust?',
+    'Sleep In or Up Early?',
 ];
 let topQuestions = [
     'Albums',
@@ -109,7 +124,6 @@ let topQuestions = [
     'Thanksgiving Sides',
     'Trips',
     'Fast Food',
-    'Breakfast Bread (Banana, Zucchini, Pumpkin, etc.)',
     'Candy',
 ];
 let customQuestions = [];
@@ -159,7 +173,7 @@ function startFunGame() {
     question.innerHTML = haveFunRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br><br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
+        // question.innerHTML = 'All Done!<br><br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -168,7 +182,7 @@ function startDeepGame() {
     question.innerHTML = getDeepRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
+        // question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -177,7 +191,7 @@ function startThisGame() {
     question.innerHTML = thisOrThatRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
-        question.innerHTML = 'All Done!<br><br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
+        // question.innerHTML = 'All Done!<br><br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
@@ -185,7 +199,7 @@ function startTopGame() {
     question.innerHTML = (`Rank your top 3: ${topRandom[currentQuestion]}`);
     currentQuestion++;
     if (question.innerHTML === `Rank your top 3: undefined`) {
-        question.innerHTML = 'All Done!<br><br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
+        // question.innerHTML = 'All Done!<br><br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
         currentQuestion = 0;
     }
 };
