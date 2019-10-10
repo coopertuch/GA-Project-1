@@ -21,7 +21,7 @@ let haveFunQuestions = [
     'How ripe do you like your bananas?',
     'If you could be invisible for one hour, where would you go and what would you do?',
     'If you were to perform in the circus, what would you do?',
-    'if you could call yourself at any point in the past and speak for 1 minute, what would you say?',
+    'If you could call yourself at any point in the past and speak for 1 minute, what would you say?',
     'What activities bring you the most joy?',
     'What\'s your favorite quote?',
     'What\'s the last song that was playing in your head?',
