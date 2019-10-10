@@ -1,9 +1,9 @@
 * {
-    font-family: verdana;
+    font-family: geneva;
 }
 
 body {
-    background-color: #303C6C;
+    background-color: #BFDFFF;
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
     align-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #303C6C;
+    background-color: #BFDFFF;
 }
 
 .home {
@@ -23,19 +23,17 @@ nav {
     padding-bottom: 4px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border-radius: 5px;
     border: 1px solid #1F2833;
-    height: 40px;
+    height: 50px;
     width: 300px;
     text-align: center;
 }
 
 .container {
-    border: 1px solid #1F2833;
-    background-color: rgb(252, 252, 252);
+    border: 1px solid #D6EAFF;
+    background-color: #D6EAFF;
     margin: 0 2% 15px 2%;
     text-align: center;
-    border-radius: 3px;
 }
 
 .question {
@@ -74,7 +72,7 @@ nav {
     border-radius: 3px;
 }
 
-.submit {
+/* .submit {
     margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
@@ -89,7 +87,7 @@ nav {
 
 .off {
     display: none;
-}
+} */
 
 
 @media screen and (min-width: 600px) {
@@ -97,23 +95,22 @@ nav {
         height: 150px;
     }
     button {
-        background-color: #62d6d6;
+        background-color: white;
         color: black;
         justify-content: center;
         align-content: center;
         height: 50px;
-        width: 13%;
-        border: 1px solid #1F2833;
-        border-radius: 3px;
+        width: 20%;
+        border: 1px solid black;
         font-size: 13px;
     }
-    form {
+    /* form {
         margin-top: 10px;
     }
     .submit {
         background-color: #9871c9;
         margin-top: 10px;
-    }
+    } */
 }
 
 @media screen and (max-width: 600px) {
@@ -121,14 +118,13 @@ nav {
         height: 250px;
     }
     button {
-        width: 70%;
-        background-color: #62d6d6;
+        width: 51%;
+        background-color: white;
         color: black;
         justify-content: center;
         align-content: center;
-        height: 32px;
+        height: 40px;
         border: 1px solid #1F2833;
-        border-radius: 3px;
         margin-bottom: 5px;
         font-size: 13px;
     }
