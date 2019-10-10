@@ -23,7 +23,7 @@ nav {
     padding-bottom: 4px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1px solid #1F2833;
+    border: 1px solid white;
     height: 50px;
     width: 300px;
     text-align: center;
@@ -124,8 +124,8 @@ nav {
         justify-content: center;
         align-content: center;
         height: 40px;
-        border: 1px solid #1F2833;
-        margin-bottom: 5px;
+        border: 1px solid white;
+        margin-bottom: 8px;
         font-size: 13px;
     }
 }
