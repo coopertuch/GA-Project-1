@@ -23,7 +23,7 @@ nav {
     padding-bottom: 4px;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1px solid white;
+    border: 1px solid #1F2833;
     height: 50px;
     width: 300px;
     text-align: center;
@@ -101,7 +101,7 @@ nav {
         align-content: center;
         height: 50px;
         width: 20%;
-        border: 1px solid black;
+        border: 1px solid #1F2833;
         font-size: 13px;
     }
     /* form {
@@ -124,7 +124,7 @@ nav {
         justify-content: center;
         align-content: center;
         height: 40px;
-        border: 1px solid white;
+        border: 1px solid #1F2833;
         margin-bottom: 8px;
         font-size: 13px;
     }
