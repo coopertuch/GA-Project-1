@@ -170,6 +170,7 @@ thisOrThatRandom = thisOrThatQuestions.random();
 topRandom = topQuestions.random();
 
 function startFunGame() {
+    question.innerHTML = "";
     question.innerHTML = haveFunRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
@@ -180,6 +181,7 @@ function startFunGame() {
 };
 
 function startDeepGame() {
+    question.innerHTML = "";
     question.innerHTML = getDeepRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
@@ -190,6 +192,7 @@ function startDeepGame() {
 };
 
 function startThisGame() {
+    question.innerHTML = "";
     question.innerHTML = thisOrThatRandom[currentQuestion];
     currentQuestion++;
     if (question.innerHTML === 'undefined') {
@@ -199,6 +202,7 @@ function startThisGame() {
     }
 };
 function startTopGame() {
+    question.innerHTML = "";
     question.innerHTML = (`Rank your top 3: ${topRandom[currentQuestion]}`);
     currentQuestion++;
     if (question.innerHTML === `Rank your top 3: undefined`) {
