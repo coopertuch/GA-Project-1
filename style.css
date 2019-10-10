@@ -125,7 +125,8 @@ nav {
         align-content: center;
         height: 100px;
         border: 1px solid #1F2833;
-        margin-bottom: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
         font-size: 18px;
     }
 }
