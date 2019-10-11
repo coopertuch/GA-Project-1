@@ -14,7 +14,7 @@ let haveFunQuestions = [
     'If you could be any animal, what type would you be?',
     'What superpower would you want?',
     'Would you like to be famous?',
-    'Do you have a "Happy Place"? Where is it? How often do you go?',
+    'Where is your happy place?',
     'If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?',
     'If you could "uninvent" one thing, what would it be?',
     'If you could "unknow" one thing you know, what would it be?',
@@ -79,6 +79,7 @@ let getDeepQuestions = [
     'What do you think is the point of a relationship?',
     'What part of yourself are you working on?',
     'What part of yourself do you love?',
+    'How do you practice mental health?'
 ];
 let thisOrThatQuestions = [
     'Booth or Table?',
