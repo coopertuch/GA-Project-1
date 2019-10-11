@@ -7,7 +7,7 @@ let haveFunQuestions = [
     'What is the hardest physical activity you have ever done?',
     'What 3 people would you bring to dinner?',
     'What were your first impressions of the people you\'re with?',
-    'What is one of your favorite ongoing jokes between friends?',
+    'What is one of your favorite ongoing jokes between your friends?',
     'Do you like being surprised?',
     'Have you ever experienced a "this is such a small world" moment?',
     'If you had to be a breed of dog, which do you think best fits your personality?',
@@ -29,9 +29,10 @@ let haveFunQuestions = [
     'If you changed your name, what would it be?',
     'How toasty do you like your toast?',
     'What % cacao do you prefer?',
-    'What topic you could discuss endlessly?',
+    'What topics do you enjoy talking about the most?',
     'When\'s the hardest you\'ve laughed?',
     'What are 3 adjectives you would use to describe yourself?',
+    'If you have a day to yourself, how do you spend it?',
 ];
 let getDeepQuestions = [
     'Who is someone you admire?',
@@ -73,6 +74,11 @@ let getDeepQuestions = [
     'For what in your life do you feel most grateful?',
     'What is the first happy memory that comes to mind?',
     'What is your idea of happiness?',
+    'How do you relax?',
+    'How do you have fun?',
+    'What do you think is the point of a relationship?',
+    'What part of yourself are you working on?',
+    'What part of yourself do you love?',
 ];
 let thisOrThatQuestions = [
     'Booth or Table?',
