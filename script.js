@@ -29,7 +29,6 @@ let haveFunQuestions = [
     'If you changed your name, what would it be?',
     'How toasty do you like your toast?',
     'What % cacao do you prefer?',
-    'What topics do you enjoy talking about the most?',
     'When\'s the hardest you\'ve laughed?',
     'What are 3 adjectives you would use to describe yourself?',
     'If you have a day to yourself, how do you spend it?',
