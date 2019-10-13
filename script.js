@@ -149,6 +149,10 @@ thisOrThat.addEventListener('click', startThisGame);
 const topThree = document.querySelector('.top');
 topThree.addEventListener('click', startTopGame);
 
+// GO BACK /////////////////////////////////////////////////////////////////////
+// const back = document.querySelector('.back');
+// back.addEventListener('click', goBack);
+
 // let custom = document.querySelector('.custom');
 // custom.addEventListener('click', startCustomGame);
 
@@ -193,7 +197,7 @@ function startDeepGame() {
     if (question.innerHTML === 'undefined') {
         // question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
         question.innerHTML = 'Keep clicking!';
-        currentQuestion = 0;
+        currentRandomQuestion = 0;
     }
 };
 
