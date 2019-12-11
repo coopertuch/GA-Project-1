@@ -1,7 +1,7 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection.
 // VARIABLES & OBJECTS //
 let haveFunQuestions = [
-  "What foods will you not eat?",
+  "What foods do you refuse to eat?",
   "What is the craziest thing you've ever eaten?",
   "If you could have any scent in a candle, what would it be?",
   "What is the hardest physical activity you have ever done?",
@@ -9,12 +9,12 @@ let haveFunQuestions = [
   "What were your first impressions of the people you're with?",
   "What is one of your favorite ongoing jokes between your friends?",
   "If you were to audition for masterchef, what meal would you make?",
+  "Let someone pick one photo from any social media - what's the backstory to that photo?",
   'Have you ever experienced a "this is such a small world" moment?',
   "If you had to be a breed of dog, which do you think best fits your personality?",
   "If you could be any animal, what type would you be?",
-  "What superpower would you want?",
+  "If you could have any superpower, what would that be?",
   "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",
-  'If you could "uninvent" one thing, what would it be?',
   'If you could "unknow" one thing you know, what would it be?',
   "How ripe do you like your bananas?",
   "If you could be invisible for one hour, where would you go and what would you do?",
@@ -28,11 +28,12 @@ let haveFunQuestions = [
   "What % cacao do you prefer?",
   "When's the hardest you've laughed?",
   "What are 3 adjectives you would use to describe yourself?",
-  "If you have a day to yourself, how do you spend it?"
+  "If you were on mainstage and had to sing 1 song to an entire festival, what would you sing?"
 ];
 let getDeepQuestions = [
   "Who is someone you admire?",
   "What was the most significant period of growth in your life?",
+  "If you have a day to yourself, how do you spend it?",
   "What are you most looking forward to in the next month?",
   "What are you most nervous about in the next month?",
   "What are you looking to accomplish in the next month?",
