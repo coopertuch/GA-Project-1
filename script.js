@@ -3,7 +3,7 @@
 let haveFunQuestions = [
   "What foods do you refuse to eat?",
   "What is the craziest thing you've ever eaten?",
-  "If you could have any scent in a candle, what would it be?",
+  "If you could have any scent candle, what would it be?",
   "What is the hardest physical activity you have ever done?",
   "If you could bring any 3 people to dinner, dead or alive, who would they be?",
   "What were your first impressions of the people you're with?",
