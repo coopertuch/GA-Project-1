@@ -1,7 +1,6 @@
 // COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection.
 // VARIABLES & OBJECTS //
 let haveFunQuestions = [
-  "What foods do you refuse to eat?",
   "What is the craziest thing you've ever eaten?",
   "If you could have any scent candle, what would it be?",
   "What is the hardest physical activity you have ever done?",
