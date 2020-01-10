@@ -182,7 +182,10 @@ Array.prototype.random = function() {
   return this;
 };
 
-let currentQuestion = 0;
+let currentFunQuestion = 0;
+let currentDeepQuestion = 0;
+let currentThisQuestion = 0;
+let currentTopQuestion = 0;
 haveFunRandom = haveFunQuestions.random();
 getDeepRandom = getDeepQuestions.random();
 thisOrThatRandom = thisOrThatQuestions.random();
@@ -190,44 +193,40 @@ topRandom = topQuestions.random();
 
 function startFunGame() {
   question.innerHTML = " ";
-  question.innerHTML = haveFunRandom[currentQuestion];
-  currentQuestion++;
+  question.innerHTML = haveFunRandom[currentFunQuestion];
+  currentFunQuestion++;
   if (question.innerHTML === "undefined") {
-    // question.innerHTML = 'All Done!<br><br>You\'ve had too much fun. Keep clicking, try out another category, or add your own custom questions!';
     question.innerHTML = "Keep clicking!";
-    currentQuestion = 0;
+    currentFunQuestion = 0;
   }
 }
 
 function startDeepGame() {
   question.innerHTML = " ";
-  question.innerHTML = getDeepRandom[currentQuestion];
-  currentQuestion++;
+  question.innerHTML = getDeepRandom[currentDeepQuestion];
+  currentDeepQuestion++;
   if (question.innerHTML === "undefined") {
-    // question.innerHTML = 'All Done!<br><br>You\'re about as deep as the ocean. Keep clicking, try out another category, or add your own custom questions!';
     question.innerHTML = "Keep clicking!";
-    currentRandomQuestion = 0;
+    currentDeepQuestion = 0;
   }
 }
 
 function startThisGame() {
   question.innerHTML = " ";
-  question.innerHTML = thisOrThatRandom[currentQuestion];
-  currentQuestion++;
+  question.innerHTML = thisOrThatRandom[currentThisQuestion];
+  currentThisQuestion++;
   if (question.innerHTML === "undefined") {
-    // question.innerHTML = 'All Done!<br><br>You\'re sounding a bit one-sided. Keep clicking, try out another category, or add your own custom questions!';
     question.innerHTML = "Keep clicking!";
-    currentQuestion = 0;
+    currentThisQuestion = 0;
   }
 }
 function startTopGame() {
   question.innerHTML = " ";
-  question.innerHTML = `Rank your top 3: ${topRandom[currentQuestion]}`;
-  currentQuestion++;
+  question.innerHTML = `Rank your top 3: ${topRandom[currentTopQuestion]}`;
+  currentTopQuestion++;
   if (question.innerHTML === `Rank your top 3: undefined`) {
-    // question.innerHTML = 'All Done!<br><br>Relax, don\'t need to be so judgemental. Keep clicking, try out another category, or add your own custom questions!';
     question.innerHTML = "Keep clicking!";
-    currentQuestion = 0;
+    currentTopQuestion = 0;
   }
 }
 
@@ -253,20 +252,3 @@ const home = document.querySelector(".home");
 home.addEventListener("click", function() {
   location.reload();
 });
-
-// SOURCES //
-// https://www.w3schools.com/jsref/met_loc_reload.asp
-// page reset
-// https://www.w3schools.com/howto/howto_js_remove_class.asp
-// https://www.w3schools.com/howto/howto_js_add_class.asp
-// remove // add class
-// https://www.w3schools.com/css/css3_mediaqueries_ex.asp
-// media queries syntax
-// https://developers.google.com/sheets/api/quickstart/js
-// google API
-// https://www.youtube.com/watch?v=tLxBwSL3lPQ
-// fisher yates shuffle
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
-// array prototype
-// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-// nesting the fisher yates within the array prototype
