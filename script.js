@@ -1,5 +1,3 @@
-// COOP'S QUESTIONS GAME FLOW - Good questions skim the surface, Great questions drive meaningful connection.
-// VARIABLES & OBJECTS //
 let haveFunQuestions = [
   "What is the craziest thing you've ever eaten?",
   "If you could have any scent candle, what would it be?",
@@ -131,7 +129,6 @@ let topQuestions = [
 ];
 let customQuestions = [];
 
-// DOM & EVENT LISTENERS //
 const question = document.querySelector(".question");
 
 const haveFun = document.querySelector(".fun");
@@ -146,28 +143,6 @@ thisOrThat.addEventListener("click", startThisGame);
 const topThree = document.querySelector(".top");
 topThree.addEventListener("click", startTopGame);
 
-// GO BACK /////////////////////////////////////////////////////////////////////
-// const back = document.querySelector('.back');
-// back.addEventListener('click', goBack);
-
-// function goBack() {
-//     if (question.innerHTML = haveFunRandom[currentQuestion]) {
-//         question.innerHTML = " ";
-//         question.innerHTML = haveFunRandom[currentQuestion];
-//         currentQuestion--;
-//     } else if (question.innerHTML === 'undefined') {
-//         question.innerHTML = 'Start clicking questions!';
-//     }
-// }
-
-// let custom = document.querySelector('.custom');
-// custom.addEventListener('click', startCustomGame);
-
-// let inputSection = document.querySelector('.inputSection');
-// let submit = document.querySelector('.submit');
-// submit.addEventListener('click', addCustom);
-
-// FUNCTIONS //
 Array.prototype.random = function() {
   let x = this.length,
     j,
